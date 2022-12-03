@@ -28,7 +28,7 @@ int main() {
         voucher = 0;
     } else if (averagePurchase >= 500 && averagePurchase <= 1000 && rated == 'Y' && preffered == 'Y') {
         voucher = 400;
-    } else if (averagePurchase > 1000 & rated == 'Y') {
+    } else if (averagePurchase > 1000) {
         voucher = 900;
     }
 

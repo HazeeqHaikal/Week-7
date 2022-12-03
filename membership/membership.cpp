@@ -4,19 +4,14 @@
 using namespace std;
 
 int main() {
-    bool status = false;
     char membership;
     char cupSize;
     char specialCode;
-    bool discount = false;
     float price = 0.00;
 
     cout << "Do you have membership? Yes(Y) or No (N): ";
     cin >> membership;
-
-    if (toupper(membership) == 'Y') {
-        status = true;
-    }
+    membership = toupper(membership);
 
     cout << "What are your desired cup size? Medium(M) or Large(L): ";
     cin >> cupSize;
@@ -25,24 +20,21 @@ int main() {
 
     cout << "Enter the special code: ";
     cin >> specialCode;
+    specialCode = toupper(specialCode);
 
-    if (toupper(specialCode) == 'T') {
-        discount = true;
-    }
-
-    if (cupSize == 'M' && status == true) {
+    if (cupSize == 'M' && membership == 'Y') {
         price = 18.00;
-    } else if (cupSize == 'L' && status == true) {
+    } else if (cupSize == 'L' && membership == 'Y') {
         price = 20.00;
-    } else if (cupSize == 'M' && status == false) {
+    } else if (cupSize == 'M' && membership != 'Y') {
         price = 22.00;
-    } else if (cupSize == 'L' && status == false) {
+    } else if (cupSize == 'L' && membership != 'Y') {
         price = 25.00;
     } else {
         cout << "Invalid cup size." << endl;
     }
 
-    if (discount == true) {
+    if (specialCode == 'T') {
         price = price - (price * 0.10);
     }
     if (price != 0.00) {

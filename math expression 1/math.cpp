@@ -4,8 +4,7 @@
 using namespace std;
 
 int main() {
-    int k, A, L;
-    char t[2];
+    int k, A, L, t1, t2;
 
     cout << "Enter k value: ";
     cin >> k;
@@ -17,12 +16,12 @@ int main() {
     cin >> L;
 
     cout << "Enter t1 value: ";
-    cin >> t;
+    cin >> t1;
 
     cout << "Enter t2 value: ";
-    cin >> t;
+    cin >> t2;
 
-    float q = ((k * A) * (t[0] - t[1])) / (float)L;
+    float q = 1.0 * ((k * A) * (t1 - t2)) / L;
     cout << "q: " << q << endl;
     return 0;
 }

@@ -13,7 +13,7 @@ int main() {
     cout << "Enter your name: ";
     getline(cin, name);
     cout << "A (TV)\nB (HiFi Set)\nC (Microwave)\nD (Washing Machine)\nE (Refrigerator)\n";
-    cout << "Enter the item type: ";
+    cout << "Enter the item letter: ";
     cin >> itemType;
     itemType = toupper(itemType);
     switch (itemType) {
@@ -37,7 +37,7 @@ int main() {
             return 0;
     }
 
-    cout << fixed << setprecision(2) << "Monthly income for " << name << "is RM" << monthlySalary + (monthlySalary * (float)commision) << endl;
+    cout << fixed << setprecision(2) << "\nMonthly income for " << name << " is RM" << monthlySalary + (monthlySalary * (float)commision) << endl;
 
     return 0;
 }
