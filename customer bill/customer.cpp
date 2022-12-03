@@ -22,7 +22,7 @@ int main() {
     if (customerType == 'R') {
         billFee = 4.5;
         serviceFee = 20.5;
-        premiumChannel = 7.5;
+        premiumChannel *= 7.5;
     } else if (customerType == 'B') {
         billFee = 15;
         if (premiumChannel <= 10) {
