@@ -12,19 +12,20 @@ int main() {
     cout << "Enter your account number: ";
     cin >> accountNumber;
 
-    cout << "Residential (R)\nBusiness (B) \nEnter your customer type: ";
+    cout << "Residential (R)\nBusiness (B)\nEnter your customer type: ";
     cin >> customerType;
     customerType = toupper(customerType);
 
-    cout << "Enter the amount of your premium channels: ";
-    cin >> premiumChannel;
-
     if (customerType == 'R') {
+        cout << "Enter the amount of your premium channels: ";
+        cin >> premiumChannel;
         billFee = 4.5;
         serviceFee = 20.5;
         premiumChannel *= 7.5;
     } else if (customerType == 'B') {
-        billFee = 15;
+        cout << "Enter the number of basic service connections: ";
+        cin >> premiumChannel;
+        billFee = 15.0;
         if (premiumChannel <= 10) {
             serviceFee = 7.5 * premiumChannel;
         } else {
@@ -32,6 +33,7 @@ int main() {
             extra = premiumChannel - 10;
             serviceFee = firstTen + (extra * 5.0);
         }
+        premiumChannel *= 50.0;
     } else {
         cout << "Invalid customer type" << endl;
     }

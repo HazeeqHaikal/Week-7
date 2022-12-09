@@ -41,7 +41,6 @@ int main() {
             default:
                 cout << "Invalid item type." << endl;
                 return 0;
-                cin.ignore();
         }
         cout << fixed << setprecision(2) << "\nMonthly income for " << name << " is RM" << monthlySalary + (monthlySalary * (float)commision) << endl;
     }
